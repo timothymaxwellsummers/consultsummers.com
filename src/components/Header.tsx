@@ -1,7 +1,8 @@
 // components/Header.tsx
 import { Typography, Stack, Button } from "@mui/joy"
 import indexStyles from '../styles/index.module.css';
-import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import { LinkedIn, Mail} from '@mui/icons-material';
+
 
 export default function Header() {
   return (
@@ -10,11 +11,11 @@ export default function Header() {
         <Stack direction="row" alignItems={"center"} alignContent={"flex-start"} sx={{mb: "5px"}}>
           <img src="/dad_logo.png" className={indexStyles.imageWidth}/>
           <div style={{ flexGrow: 1 }} />
-          <a href="#contact" style={{textDecoration: "none"}}>
-          <Button color="primary" variant="plain" sx={{mr:[1,3,3,3]}}>Contact</Button>
+          <a href="mailto:clive@consultsummers.com" style={{textDecoration: "none"}}>
+          <Button color="primary" variant="plain" endDecorator={<Mail />} size='sm' sx={{mr:[1,3,3,3]}}>Email</Button>
           </a>
           <a href="https://www.linkedin.com/in/clive-summers-7b554214/" style={{textDecoration: "none"}} target="_blank">
-          <Button endDecorator={<LinkedInIcon />} color="primary" >LinkedIn</Button>
+          <Button endDecorator={<LinkedIn />} color="primary" >LinkedIn</Button>
           </a>
         </Stack>
         <img src="/DadLine.svg" alt="Line" height={"1px"}/>   
