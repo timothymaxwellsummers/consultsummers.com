@@ -1,0 +1,68 @@
+.imageWidth
+ {
+    width: 200px;
+}
+
+.heading {
+    font-family: 'Univers Next W04 620 Cond Bold';
+    color: #4D4A47;
+    font-size: 30px;
+}
+
+@media only screen and (max-width: 1011px) {
+    .imageWidth
+     {
+        width: 200px;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .imageWidth
+     {
+        width: 200px;
+    }
+}
+
+@media only screen and (max-width: 543px) {
+    .imageWidth
+     {
+        width: 200px;
+    }
+}
+
+.parent {
+    position: relative;
+    top: 0;
+    left: 0;
+    
+}
+
+.headerImage {
+    position: relative;
+  top: 0;
+  left: 0;
+    width: 100%;
+    z-index: 0;
+}
+
+.headerContent {
+    position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  display: flex;
+    align-items: center;
+    justify-content: center; 
+}
+
+.stickyHeader {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; 
+    position: -webkit-sticky; /* For Safari */
+    position: sticky;
+    top: 0;
+    z-index: 1000; /* Ensure the header stays on top of other content */
+    backdrop-filter: blur(10px);
+    width: 100%;
+}

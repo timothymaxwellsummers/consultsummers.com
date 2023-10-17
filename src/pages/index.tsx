@@ -1,118 +1,71 @@
-import Image from 'next/image'
-import { Inter } from 'next/font/google'
-
-const inter = Inter({ subsets: ['latin'] })
+import { Stack, Card, Typography, CardOverflow, AspectRatio, Box, Input, Textarea, Button } from "@mui/joy"
+import indexStyles from '../styles/index.module.css';
+import { FlightTakeoff, AssignmentTurnedIn, Language, Info, RocketLaunch, Send } from '@mui/icons-material';
+import Contact from "@/components/contact";
 
 export default function Home() {
   return (
-    <main
-      className={`flex min-h-screen flex-col items-center justify-between p-24 ${inter.className}`}
-    >
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/pages/index.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
-
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700/10 after:dark:from-sky-900 after:dark:via-[#0141ff]/40 before:lg:h-[360px]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Discover and deploy boilerplate example Next.js&nbsp;projects.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
+    <>
+      <Stack direction={"column"} alignItems="center" sx={{ position: "relative", zIndex: "100" }}>
+        <Stack direction={"column"} sx={{ mt: "10px", width: ["90%", "80%", "80%", "700px"] }} pt={5}>
+          <Stack direction={"row"} gap={4} alignItems="center" mb={4}>
+            <div className={indexStyles.heading}>Welcome to Clive Summers Consulting</div>
+            <img src="/RedLine.svg" alt="Line" />
+          </Stack>
+          <Stack direction={"row"} gap={2} alignItems="center" mb={11}>
+            <Card sx={{ width: '23%' }}>
+              <CardOverflow>
+                <AspectRatio objectFit="fill" ratio="1/1" variant="plain">
+                  <img src="/dadtrans.png" alt="Line" />
+                </AspectRatio>
+              </CardOverflow>
+            </Card>
+            <Card sx={{ width: '77%' }}>
+              <Typography startDecorator={<FlightTakeoff />}>40+ years experience in the aerospace industry</Typography>
+              <Typography startDecorator={<AssignmentTurnedIn />}>Gainined contracts on 80 different aircraft platforms in 7 different systems, either directly with the airframers, or indirectly with tier one or tier two suppliers</Typography>
+              <Typography startDecorator={<Language />}>Creation of a global Product Support Network</Typography>
+            </Card>
+          </Stack>
+          <Stack direction={"row"} gap={4} alignItems="center" mb={5}>
+            <div className={indexStyles.heading}>Previous Partners Include</div>
+          </Stack>
+          <Stack direction={"column"} gap={1} alignItems="center">
+            <Stack direction={"row"} gap={5} alignItems="center" mb={3}>
+              <Box sx={{ maxWidth: ["210px"] }}>
+                <img src="/boeing.png" alt="Line" style={{ maxWidth: "100%", opacity: "0.7" }} />
+              </Box>
+              <Box sx={{ maxWidth: ["210px"] }}>
+                <img src="/dalogo.png" alt="Line" style={{ maxWidth: "100%" }} />
+              </Box>
+            </Stack>
+            <Stack direction={"row"} gap={5} alignItems="center" mb={11}>
+              <Box sx={{ maxWidth: ["160px"] }}>
+                <img src="/gkntrans.png" alt="Line" style={{ maxWidth: "100%", opacity: "0.8" }} />
+              </Box>
+              <Box sx={{ maxWidth: ["130px"] }}>
+                <img src="/airbuslogo.png" alt="Line" style={{ maxWidth: "100%", opacity: "0.6" }} />
+              </Box>
+              <Box sx={{ maxWidth: ["160px"] }}>
+                <img src="/samtrans.png" alt="Line" style={{ maxWidth: "100%", opacity: "0.6" }} />
+              </Box>
+            </Stack>
+          </Stack>
+          <Stack direction={"row"} gap={4} alignItems="center" mb={5}>
+            <div className={indexStyles.heading}>About Me</div>
+          </Stack>
+          <Card sx={{ marginBottom: 3 }}>
+          <Typography startDecorator={<Info />}><b>My Profile</b></Typography>
+          <Typography>Education forms my professional foundation. With extensive experience in aviation and metal processing, I've built a robust industry network. As a skilled marketing professional, I communicate ideas effectively and excel in tactful negotiations. Building strong relationships and inspiring others are my passions.</Typography>
+          </Card>
+          <Card sx={{ marginBottom: 11  }}>
+          <Typography startDecorator={<RocketLaunch />}><b>40 years at Sitec Aerospace</b></Typography>
+          <Typography>In 40 years, I played a vital role in the company's growth, overseeing processes and achieving significant milestones. At Sitec Aerospace, we participated in 80 aircraft platforms across 7 systems, through direct and indirect contracts with airframers and suppliers.</Typography>
+          </Card>
+          <div id="contact">
+          <Contact />
+          </div>
+        </Stack>
+      </Stack>
+    </>
   )
 }
