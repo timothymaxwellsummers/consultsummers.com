@@ -5,7 +5,7 @@ import { Send } from '@mui/icons-material';
 export default function Contact() {
     return (
         <>
-            <Stack direction={"row"} gap={4} alignItems="center" mb={5}>
+            <Stack direction={{ xs: 'column', sm: 'row' }} gap={4} alignItems={{ xs: "start", sm: "center" }} mb={5}>
                 <div className={indexStyles.heading}>Get in Contact</div>
                 <img src="/RedLine.svg" alt="Line" />
             </Stack>
@@ -14,7 +14,7 @@ export default function Contact() {
                 <Input placeholder="Email" sx={{ width: "100%" }} />
             </Stack>
             <Textarea placeholder="Message" sx={{ width: "100%", marginBottom: 1 }} minRows={4} />
-            <Button sx={{ width: "100%", marginBottom: 8 }} startDecorator={<Send />}>Send</Button>
+            <Button sx={{ width: "100%", marginBottom: [5,8,8,8] }} startDecorator={<Send />}>Send</Button>
         </>
     )
 }

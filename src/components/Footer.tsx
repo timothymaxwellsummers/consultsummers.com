@@ -8,9 +8,9 @@ export default function Footer() {
   return (
     <>
     <Stack direction="column" sx={{ mt: "10px", width: ["95%", "95%", "95%", "90%"], maxWidth: "1200px"}} alignContent={"flex-start"}>
-    <img src="/DadLine.svg" alt="Line"/>   
+    <img src="/DadLine.svg" alt="Line" height={"1px"}/>   
 
-    <Stack direction="row" alignItems={"center"} alignContent={"flex-start"} sx={{pb: "1em", pt: "1em"}}>
+    <Stack direction={{ xs: 'column', sm: 'row' }} alignItems={"center"} alignContent={"flex-start"} sx={{pb: "1em", pt: "1em"}} gap={1}>
       <Typography level='body-sm' style={{ flexGrow: 1 }} startDecorator={<SvgIcon size='sm'><Copyright/></SvgIcon>}>Clive Maxwell Summers</Typography>
           <div style={{ flexGrow: 1 }} />
           <a href="mailto:clive@consultsummers.com" style={{textDecoration: "none"}}>
