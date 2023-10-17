@@ -1,4 +1,4 @@
-# InnFieldAdvisory.com
+# ConsutlSummers.com
 
 Built this basic landing page for a friend: [InnFieldAdvisory](https://www.consultsummers.com/)
 
